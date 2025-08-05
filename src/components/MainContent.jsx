@@ -2,7 +2,9 @@ import React from "react";
 import FeaturesTab from "./FeaturesTab";
 import dots_patter from "../assets/images/bg-dots.svg" 
 import AcordeonFAQ from "./AcordeonFAQ";
-import icon_error from "../assets/images/icon-error.svg" ;
+import google from "../assets/images/logo-chrome.svg" ;
+import firefox from "../assets/images/logo-firefox.svg" ;
+import opera from "../assets/images/logo-opera.svg" ;
 import EmailInput from "./EmailInput";
 
 export default function MainContent() {
@@ -10,19 +12,19 @@ export default function MainContent() {
 const extensions=[{
     name:"Add to Chrome",
     version:"Minimun version 62",
-    img:"./src/assets/images/logo-chrome.svg"
+    img:google
 
 },
 {
     name:"Add to Firefox",
     version:"Minimun version 55",
-     img:"./src/assets/images/logo-firefox.svg"
+     img:firefox
     
 },
 {
     name:"Add to Opera",
     version:"Minimun version 46",
-     img:"./src/assets/images/logo-opera.svg"
+     img:opera
     
 }]
 
@@ -41,7 +43,7 @@ const extensions=[{
             Open a new browser tab and see your sites load instantly. Try for
             free.
           </p>
-          <div className="flex gap-5">
+          <div className="flex gap-5 items-center justify-center">
             <button className="bg-fm-Blue-600 px-2 py-4 shadow-lg rounded-md font-bold text-white text-sm">
               Get it on Chrome
             </button>
@@ -53,7 +55,7 @@ const extensions=[{
       </div>
       {/* features */}
 
-      <div className="my-40 p-5">
+      <div className="my-0 p-5">
         <FeaturesTab></FeaturesTab>
       </div>
       {/* dowload the extension */}
