@@ -31,7 +31,7 @@ export default function AcordeonFAQ() {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto mt-10 ">
+    <div className="w-full max-w-2xl mx-auto mt-10 md:max-w-[600px]">
         <div>
           <p className="text-2xl font-medium text-center text-fm-Blue-950">Frecuently Asked Questions</p>
           <p className="text-neutral-400 text-center text-sm my-8 leading-relaxed ">

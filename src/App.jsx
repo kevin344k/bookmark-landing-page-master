@@ -12,8 +12,10 @@ function App() {
     <>
      
      <Navbar></Navbar>
-     <MainContent></MainContent>
+   <div className='bg-fm-Blue-950'>
+      <MainContent></MainContent>
      <Footer></Footer>
+   </div>
     </>
   )
 }

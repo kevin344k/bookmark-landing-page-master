@@ -52,22 +52,23 @@ const handleClickSVG=(name)=>{
         </button>
 
         {/* Menú Desktop */}
-        <div className="hidden md:flex px-12 items-center justify-center gap-12 lg:px-0">
-          <ul className="text-neutral-600 text-center flex md:flex-row gap-4 text-md">
-            {["inicio", "tecnologia", "servicios", "nuestra-app"].map(
+        <div className="hidden md:flex px-12 items-center justify-center gap-12 md:p-0 lg:px-0">
+          <ul className="text-neutral-500 text-center flex md:flex-row gap-4 text-md ">
+            {["features", "pricing", "contact"].map(
               (item) => (
                 <li key={item} className="relative group">
                   <a
                     href={`#${item}`}
-                    className="hover:text-secondary-yellow capitalize"
+                    className="hover:text-fm-Red-400 uppercase"
                   >
                     {item.replace("-", " ")}
                   </a>
-                  <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-secondary-yelloy transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute left-0 -bottom-1 h-[2px] w-0  transition-all duration-300 group-hover:w-full"></span>
                 </li>
               )
             )}
           </ul>
+          <button className="bg-fm-Red-400 px-6 py-2 rounded-sm">Login</button>
         </div>
 
         {/* Modal Mobile SIEMPRE MONTADO */}
