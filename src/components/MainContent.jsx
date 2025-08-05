@@ -6,7 +6,7 @@ import google from "../assets/images/logo-chrome.svg" ;
 import firefox from "../assets/images/logo-firefox.svg" ;
 import opera from "../assets/images/logo-opera.svg" ;
 import EmailInput from "./EmailInput";
-
+import pattern from "../assets/images/bg-pattern.svg";
 export default function MainContent() {
 
 const extensions=[{
@@ -30,12 +30,15 @@ const extensions=[{
 
 
   return (
-    <div className="">
+    <div className="overflow-hidden">
       {/* hero */}
       <div className="p-5">
-        <div className="m-auto w-full h-80  bg-[url('./assets/images/illustration-hero.svg')] bg-contain bg-no-repeat bg-center"></div>
-        <div className="my-12">
-          <p className="text-3xl font-medium text-center text-fm-Blue-950">
+     <div className="w-full relative h-60 ">
+         <div className="m-auto w-full  h-full  bg-[url('./assets/images/illustration-hero.svg')] bg-contain bg-no-repeat bg-center"></div>
+         <img className="absolute w-100 h-50 -bottom-5 -right-10 -z-1 rotate-180" src={pattern} alt="" />
+     </div>
+        <div className="my-12 mt-18">
+          <p className="text-3xl font-medium text-center  text-fm-Blue-950">
             A Simple Bookmark Manager
           </p>
           <p className="text-neutral-400 text-center text-md my-8">
@@ -59,7 +62,7 @@ const extensions=[{
         <FeaturesTab></FeaturesTab>
       </div>
       {/* dowload the extension */}
-      <div className="my-40 p-5">
+      <div className="my-20 p-5">
         <div>
           <p className="text-2xl font-medium text-center text-fm-Blue-950">Dowload the extension</p>
           <p className="text-neutral-400 text-center text-sm my-8 leading-relaxed ">
