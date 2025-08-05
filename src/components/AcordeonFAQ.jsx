@@ -38,16 +38,16 @@ export default function AcordeonFAQ() {
            Here are some of our FAQs. If you have any other questions you`d like answered please feel free to email us.
           </p>
         </div>
-      <div className="divide-y divide-gray-300 border-t border-b border-neutral-300">
+      <div className="divide-y my-20 divide-gray-300 border-t border-b border-neutral-300">
         {faqs.map((faq, index) => (
           <div key={index} className="py-6">
             <button
-              className="flex justify-between w-full text-left text-sm font-normal text-fm-Blue-950  focus:outline-none"
+              className="flex justify-between w-full text-left text-sm font-normal text-fm-Blue-950 hover:cursor-pointer focus:outline-none"
               onClick={() => toggleAccordion(index)}
             >
               {faq.question}
               <span className="ml-2 ">
-                {activeIndex === index ? <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="hsl(0, 94%, 66%)" stroke-width="3" d="M1 1l8 8 8-8"/></svg> : <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8"/></svg>}
+                {activeIndex === index ? <svg className="rotate-180 transform-gpu transition-transform duration-400 ease-in-out" xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="hsl(0, 94%, 66%)" strokeWidth="3" d="M1 1l8 8 8-8"/></svg> : <svg className="rotate-0 transform-gpu transition-transform duration-400 ease-in-out" xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" strokeWidth="3" d="M1 1l8 8 8-8"/></svg>}
               </span>
             </button>
 
@@ -63,7 +63,7 @@ export default function AcordeonFAQ() {
         ))}
       </div>
         <div className="w-full m-auto flex">
-            <button className="bg-fm-Blue-600 px-6 py-4 m-auto mt-8  shadow-lg w-fit m-auto rounded-md font-bold text-white text-sm">More Info</button>
+            <button className="bg-fm-Blue-600 px-6 py-4 m-auto mt-8  shadow-lg w-fit rounded-md font-bold text-white text-sm">More Info</button>
         </div>
     </div>
   );
