@@ -12,7 +12,7 @@ export default function FeaturesTab() {
 
   return (
     <div className="w-full  mx-auto mt-10">
-      <p className="text-2xl font-medium text-center text-fm-Blue-950">
+      <p className="text-2xl font-medium text-center text-fm-Blue-950 dark:text-neutral-500">
         Features
       </p>
       <p className="text-neutral-400 text-center text-sm my-8 leading-relaxed md:max-w-[600px] md:mx-auto">
@@ -21,13 +21,13 @@ export default function FeaturesTab() {
         them on the go.
       </p>
       {/* Contenedor de pestañas */}
-      <div className="flex flex-col items-center border-b border-t border-gray-300 relative divide-y divide-gray-300 md:flex-row md:border-t-0 md:divide-y-0 md:max-w-[600px] md:m-auto">
+      <div className="flex flex-col items-center border-b border-t border-gray-300 dark:border-gray-600 relative divide-y divide-gray-300 dark:divide-gray-600 md:flex-row md:border-t-0 md:divide-y-0 md:max-w-[600px] md:m-auto">
         {tabs.map((tab) => (
           <button
             key={tab.id}
             className={`relative flex-1 p-5  text-center transition-colors duration-300 w-full md:h-full ${
               activeTab === tab.id
-                ? "text-neutral-800 font-middle"
+                ? "text-neutral-800 font-middle dark:text-fm-Red-400"
                 : "text-gray-500"
             }`}
             onClick={() => setActiveTab(tab.id)}
@@ -73,7 +73,7 @@ export default function FeaturesTab() {
                 animation: "slideInRight 0.7s ease-out forwards",
               }}
             >
-              <p className="text-2xl font-medium text-center text-fm-Blue-950">
+              <p className="text-2xl font-medium text-center text-fm-Blue-950 dark:text-neutral-500">
                 Bookmark in once click
               </p>
               <p className="text-neutral-400 text-center text-sm my-4 leading-relaxed lg:text-left">
@@ -114,7 +114,7 @@ export default function FeaturesTab() {
                 animation: "slideInRight 0.7s ease-out forwards",
               }}
             >
-              <p className="text-2xl font-medium text-center text-fm-Blue-950">
+              <p className="text-2xl font-medium text-center text-fm-Blue-950 dark:text-neutral-500">
                 Intelligent search
               </p>
               <p className="text-neutral-400 text-center text-sm my-4 leading-relaxed lg:text-left">
@@ -154,7 +154,7 @@ export default function FeaturesTab() {
                 animation: "slideInRight 0.7s ease-out forwards",
               }}
             >
-              <p className="text-2xl font-medium text-center text-fm-Blue-950 lg:text-left">
+              <p className="text-2xl font-medium text-center text-fm-Blue-950 lg:text-left dark:text-neutral-500">
                 Share your bookmarks
               </p>
               <p className="text-neutral-400 text-center text-sm my-4 leading-relaxed lg:text-left">

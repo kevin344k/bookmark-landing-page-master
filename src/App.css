@@ -1,14 +1,84 @@
 
-
-p{
-    
-    font-family: var(--font-fm-rubik);
+p {
+  font-family: var(--font-fm-rubik);
 }
-     @keyframes slideInLeft {
-          0% { transform: translateX(-50px); opacity: 0; }
-          100% { transform: translateX(0); opacity: 1; }
-        }
-        @keyframes slideInRight {
-          0% { transform: translateX(50px); opacity: 0; }
-          100% { transform: translateX(0); opacity: 1; }
-        }
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInRight {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fade-in-scale {
+  animation: fadeInScale 0.4s ease-out forwards;
+}
+
+@keyframes pressBounce {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  40% {
+    transform: translateY(4px) scale(0.95);
+  }
+  70% {
+    transform: translateY(-2px) scale(1.02);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+.click-bounce {
+  animation: pressBounce 0.25s ease;
+}
+
+
+/* Animación de expansión */
+.circle-expansion {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.8s ease;
+  z-index: -1;
+}
+
+.circle-expansion.dark {
+  background-color: #000;
+}
+
+.circle-expansion.light {
+  background-color: #fff;
+}
+
+.circle-expansion.dark,
+.circle-expansion.light {
+  transform: scale(100); /* crece hasta cubrir toda la pantalla */
+}

@@ -33,7 +33,7 @@ export default function AcordeonFAQ() {
   return (
     <div className="w-full max-w-2xl mx-auto mt-10 md:max-w-[600px]">
         <div>
-          <p className="text-2xl font-medium text-center text-fm-Blue-950">Frecuently Asked Questions</p>
+          <p className="text-2xl font-medium text-center text-fm-Blue-950 dark:text-neutral-500">Frecuently Asked Questions</p>
           <p className="text-neutral-400 text-center text-sm my-8 leading-relaxed ">
            Here are some of our FAQs. If you have any other questions you`d like answered please feel free to email us.
           </p>
@@ -42,7 +42,7 @@ export default function AcordeonFAQ() {
         {faqs.map((faq, index) => (
           <div key={index} className="py-6">
             <button
-              className="flex justify-between w-full text-left text-sm font-normal text-fm-Blue-950 hover:cursor-pointer focus:outline-none"
+              className="flex justify-between w-full text-left text-sm font-normal text-fm-Blue-950 hover:cursor-pointer dark:text-neutral-200 focus:outline-none"
               onClick={() => toggleAccordion(index)}
             >
               {faq.question}

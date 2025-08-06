@@ -27,9 +27,9 @@ export default function MainContent() {
   ];
 
   return (
-    <div className="bg-white overflow-hidden rounded-bl-4xl rounded-br-4xl lg:rounded-none ">
+    <div className="bg-white overflow-hidden rounded-bl-4xl rounded-br-4xl lg:rounded-none dark:bg-black">
       {/* hero */}
-      <div className="p-5 lg:flex lg:flex-row-reverse lg:my-12 lg:max-w-[900px] lg:mx-auto">
+      <div className="p-5 lg:flex lg:flex-row-reverse lg:my-12 lg:max-w-[900px] lg:mx-auto xl:max-w-[1200px]">
         <div className="w-full relative z-10 h-60 sm:h-90 md:h-110">
           <div className="m-auto w-full  h-full  bg-[url('./assets/images/illustration-hero.svg')] bg-contain bg-no-repeat bg-center "></div>
           <img
@@ -38,11 +38,11 @@ export default function MainContent() {
             alt=""
           />
         </div>
-        <div className="my-12 mt-18 md:max-w-[600px] md:mx-auto lg:max-w-[400px] lg:text-left">
-          <p className="text-3xl font-medium text-center  text-fm-Blue-950 lg:text-left">
+        <div className="my-12 mt-18 md:max-w-[600px] md:mx-auto lg:max-w-[400px] lg:text-left xl:max-w-[600px]">
+          <p className="text-3xl font-medium text-center  text-fm-Blue-950 lg:text-left lg:text-5xl dark:text-neutral-500">
             A Simple Bookmark Manager
           </p>
-          <p className="text-neutral-400 text-center text-md my-8 lg:text-left">
+          <p className="text-neutral-400 text-center text-md my-8 lg:text-left xl:text-xl">
             A clean and simple interface to organize your favourite websites.
             Open a new browser tab and see your sites load instantly. Try for
             free.
@@ -59,13 +59,13 @@ export default function MainContent() {
       </div>
       {/* features */}
 
-      <div className="my-0 p-5">
+      <div className="my-0 p-5 xl:max-w-[1200px] xl:mx-auto">
         <FeaturesTab></FeaturesTab>
       </div>
       {/* dowload the extension */}
-      <div className="my-20 p-5 md:max-w-[600px] md:mx-auto lg:max-w-none">
+      <div className="my-20 p-5 md:max-w-[600px] md:mx-auto lg:max-w-none xl:max-w-[1200px]">
         <div>
-          <p className="text-2xl font-medium text-center text-fm-Blue-950">
+          <p className="text-2xl font-medium text-center text-fm-Blue-950 dark:text-neutral-500">
             Dowload the extension
           </p>
           <p className="text-neutral-400 text-center text-sm my-8 leading-relaxed ">
@@ -77,14 +77,14 @@ export default function MainContent() {
           {extensions.map((ext, index) => (
           <div
             key={index}
-            className="py-8 text-center m-auto w-fit shadow-lg rounded-lg mb-12"
+            className="py-8 text-center m-auto w-fit shadow-lg rounded-lg mb-12 dark:bg-neutral-900"
                 style={{
         transform: `translateY(${index * 50}px)` // escalera vertical
       }}
           >
             <img className="m-auto mb-8" src={ext.img} alt="" />
             <div className="my-12">
-              <p className="text-2xl font-medium text-center text-md text-fm-Blue-950">
+              <p className="text-2xl font-medium text-center text-md text-fm-Blue-950 dark:text-neutral-500">
                 {ext.name}
               </p>
               <p className="text-neutral-400 text-center text-sm my-4 leading-relaxed">

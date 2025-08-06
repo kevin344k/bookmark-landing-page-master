@@ -11,7 +11,7 @@ const handleClickSVG=(name)=>{
 
   return (
     <div className='bg-fm-Blue-950 shadow-[inset_0_4px_10px_rgba(0,0,0,0.3)] '>
-      <div className='flex flex-col items-center justify-center gap-12 py-20 lg:flex-row lg:max-w-[900px] lg:m-auto lg:justify-between'>
+      <div className='flex flex-col items-center justify-center gap-12 py-20 lg:flex-row lg:max-w-[900px] xl:max-w-[1200px] lg:m-auto lg:justify-between'>
        
         <ul className='flex flex-col gap-8 text-white text-center lg:flex-row lg:items-center'>
            <img className='w-45' src={logo_white} alt="" />
