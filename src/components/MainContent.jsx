@@ -27,9 +27,9 @@ export default function MainContent() {
   ];
 
   return (
-    <div className="bg-white overflow-hidden rounded-bl-4xl rounded-br-4xl lg:rounded-none dark:bg-black">
+    <div className="bg-white overflow-hidden rounded-bl-4xl rounded-br-4xl lg:rounded-none dark:bg-black ">
       {/* hero */}
-      <div className="p-5 lg:flex lg:flex-row-reverse lg:my-12 lg:max-w-[900px] lg:mx-auto xl:max-w-[1200px]">
+      <div className="p-5 lg:flex lg:flex-row-reverse lg:my-12 lg:max-w-[900px] lg:mx-auto xl:max-w-[1200px] animate-fade-in">
         <div className="w-full relative z-10 h-60 sm:h-90 md:h-110">
           <div className="m-auto w-full  h-full  bg-[url('./assets/images/illustration-hero.svg')] bg-contain bg-no-repeat bg-center "></div>
           <img
@@ -59,11 +59,11 @@ export default function MainContent() {
       </div>
       {/* features */}
 
-      <div className="my-0 p-5 xl:max-w-[1200px] xl:mx-auto">
+      <div className="my-0 p-5 xl:max-w-[1200px] xl:mx-auto animate-fade-in">
         <FeaturesTab></FeaturesTab>
       </div>
       {/* dowload the extension */}
-      <div className="my-20 p-5 md:max-w-[600px] md:mx-auto lg:max-w-none xl:max-w-[1200px]">
+      <div className="my-20 p-5 md:max-w-[600px] md:mx-auto lg:max-w-none xl:max-w-[1200px] animate-fade-in">
         <div>
           <p className="text-2xl font-medium text-center text-fm-Blue-950 dark:text-neutral-500">
             Dowload the extension
